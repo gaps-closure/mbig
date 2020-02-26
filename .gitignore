@@ -1,0 +1,8 @@
+*.sess
+*.swp
+*~
+z
+.lastclone
+log/
+build/
+cle/
