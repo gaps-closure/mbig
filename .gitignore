@@ -3,6 +3,7 @@
 *~
 z
 .lastclone
+crosscompile/gcc-arm-9.2-2019.12-x86_64-aarch64-none-linux-gnu*
 log/
 build/
 cle/
