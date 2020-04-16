@@ -34,8 +34,8 @@ if [ -d $packagedir ]
 then
 	gccdir=`pwd`/$packagedir
 	export PATH=$PATH:$gccdir/bin
-	export AARCH64_CFLAGS="-I$gccdir/include"
-	export AARCH64_LDFLAGS="-L$gccdir/lib -L$gccdir/lib64 -L$gccdir/lib/gcc"
+	export AARCH64_CFLAGS="-I$gccdir/include -I$gccdir/../aarch64includes"
+	export AARCH64_LDFLAGS="-L$gccdir/lib -L$gccdir/lib64 -L$gccdir/lib/gcc -L$gccdir/../aarch64libs"
 else
 	echo Could not find aarch64 compiler
 fi
