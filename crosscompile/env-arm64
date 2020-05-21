@@ -32,6 +32,7 @@ fi
 if [ ! -d "arm64-includes" ] || [ ! -d "arm64-libs" ]
 then
     echo get ubuntu arm64 enviroment
+    sudo apt install fakeroot fakechroot -y
     ./fetchsystemlibs.py arm64
 fi
 
