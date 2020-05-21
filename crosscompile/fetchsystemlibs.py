@@ -24,7 +24,8 @@ import re
 
 #libraries/dev headers required for building the system
 BOOTSTRAP_INCLUDE = "libconfig-dev,libconfig9,libunwind8,libunwind-dev," \
-    "libsodium23,libsodium-dev,liblzma5,liblzma-dev,libc6-dev,libzmq3-dev"
+    "libsodium23,libsodium-dev,liblzma5,liblzma-dev,libc6-dev,libzmq3-dev," \
+    "libstdc++6"
 
 #as we will remove all but /usr/include and /usr/lib we do not need every package
 #so exclude some larger ones
