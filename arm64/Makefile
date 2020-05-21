@@ -26,7 +26,7 @@ hal:
 	mkdir -p hal/appgen/apptest
 	$(MAKE) -C ../../hal/ \
 		CFLAGS="-O2 -Wall -Wstrict-prototypes $(CFLAGS)" \
-	        LDFLAGS="$(LDFLAGS) -L$(ARM64DIR)/hal/arm64_prebuild -lsodium -lunwind -llzma  -lc -lstdc++ -lpthread -ldl" \
+	        LDFLAGS="-L$(ARM64DIR)/hal/arm64_prebuild $(LDFLAGS) -lsodium -lunwind -llzma  -lc -lstdc++ -lpthread -ldl" \
 		STATICZMQ="$(ARM64DIR)/hal/arm64_prebuild/libzmq.a" \
 		OBJDIR="$(ARM64DIR)/hal"
 

@@ -28,11 +28,7 @@ handle_opts "$@"
 
 echo "BUILD=${BUILD}"
 
-#init build enviroment for aarch64
-pushd ../crosscompile
-source env-aarch64
-popd
-
+#based off input parameters either run clean or build all
 if [ "$CLEAN" == "1" ]
 then
   #clean
@@ -40,6 +36,13 @@ then
   make clean 
 else
   #install
+
+  #init build enviroment for arm64/aarch64
+  pushd ../crosscompile
+  source env-arm64
+  popd
+
+  #run make all
   make
 fi
 			
