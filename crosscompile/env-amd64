@@ -1,0 +1,12 @@
+#!/bin/bash
+#source this file to set up your enviroment to include the
+
+if [ ! -d "amd64-includes" ] || [ ! -d "amd64-libs" ]
+then
+    echo get ubuntu amd64 enviroment
+    ./fetchsystemlibs.py amd64
+fi
+
+#provide links both for AARCH64 and ARM64 to maximize compatibility
+export AMD64_CFLAGS="-I$gccdir/../amd64-includes"
+export AMD64_LDFLAGS="-L$gccdir/../amd64-libs -L$gccdir/../amd64-libs/aarch64-linux-gnu"
